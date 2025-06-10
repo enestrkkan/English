@@ -1,0 +1,292 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+.main-content {
+    flex: 1;
+}
+
+
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f3c2c2; /* açık kırmızı tonunda hafif arka plan */
+}
+
+/* Top Bar Styles */
+.top-bar {
+    background-color: #b22222; /* koyu kırmızı */
+    color: #fff;
+    padding: 20px 20px; /* kalınlığı artırdım */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1100;
+}
+
+.top-bar .logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.top-bar h1 {
+    font-size: 20px;
+    margin: 0;
+    flex-grow: 1;
+}
+
+/* Menü butonu */
+.top-bar button {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 200px;
+    background-color: #8b0000; /* daha koyu kırmızı */
+    color: #fff;
+    position: fixed;
+    top: 110px; /* topbar kalınlığına göre ayarlandı */
+    bottom: 0;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-200px);
+    z-index: 1050;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding: 15px 20px;
+    border-bottom: 1px solid #a52a2a; /* kahverengimsi kırmızı çizgi */
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    transition: background-color 0.2s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #a52a2a;
+}
+
+/* Content Area Styles */
+.content {
+    margin-left: 20px;
+    padding: 20px;
+    padding-top: 90px; /* topbar ve biraz boşluk */
+    max-width: 800px;
+    margin: 90px auto 40px;
+    background: #fcebea; /* açık kırmızı arka plan */
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Titles */
+h2 {
+    color: #b22222;
+    margin-top: 0;
+    text-align: center; /* Introduction başlığı ortaya alındı */
+}
+
+/* Introduction image */
+#introduction img {
+    display: block;
+    margin: 10px auto 20px;
+    max-width: 80%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* FAQ Button Style */
+.faq-question {
+    width: 100%;
+    background-color: #b22222;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    transition: background-color 0.3s;
+}
+
+.faq-question:hover {
+    background-color: #8b0000;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    background-color: #ffb9b6;
+    border-radius: 0 0 8px 8px;
+    padding: 0 20px;
+    margin-bottom: 10px;
+}
+
+.faq-answer.open {
+    max-height: 500px;
+    padding: 10px 20px;
+}
+
+/* Form Styles */
+form {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input,
+form textarea,
+form button {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+form button {
+    background-color: #b22222;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #8b0000;
+}
+
+/* What Are We Doing Section */
+#what-are-we-doing {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #ffe5e5;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#what-are-we-doing h2 {
+    text-align: center;
+    color: #d32f2f;
+    font-size: 24px;
+}
+
+#what-are-we-doing ul {
+    list-style-type: disc;
+    margin: 20px 0;
+    padding-left: 40px;
+}
+
+#what-are-we-doing ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.slogan {
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    margin-top: 5px;
+    font-style: italic;
+    opacity: 0.9;
+}
+.chart {
+    display: block;
+    margin: 20px auto;
+    max-width: 90%;
+    height: auto;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.intro-poster{
+    border-radius: 5px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+    background-color: #800000; /* Dark red */
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+.footer a {
+    color: #80dfff; /* Light blue for links */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.question {
+    display: grid;
+    place-items: center;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .top-bar {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px 20px;
+    }
+
+    .sidebar {
+        transform: translateX(-100%);
+        position: fixed;
+        top: 70px;
+        width: 100%;
+        height: calc(100% - 70px);
+    }
+
+    .content {
+        margin: 20px;
+        padding-top: 60px;
+    }
+}
